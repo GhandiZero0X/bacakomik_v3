@@ -1,0 +1,64 @@
+name: bacakomik_v3
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.19.0
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+  flutter_launcher_icons: ^0.13.1
+  rename: ^3.0.2
+  http: ^1.2.1
+  shared_preferences: ^2.2.3
+
+  cupertino_icons: ^1.0.6
+  responsive_grid: ^2.4.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/img_logo_bacakomik5.png"
+  min_sdk_android: 16
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/UbuntuMedium.ttf
+          weight: 500
+        - asset: assets/fonts/UbuntuRegular.ttf
+          weight: 400
+        - asset: assets/fonts/UbuntuBold.ttf
+          weight: 700
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/RobotoRegular.ttf
+          weight: 400
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+    - family: DM Sans
+      fonts:
+        - asset: assets/fonts/DMSansBold.ttf
+          weight: 700
+        - asset: assets/fonts/DMSansRegular.ttf
+          weight: 400
+
