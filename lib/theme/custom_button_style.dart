@@ -57,8 +57,8 @@ class CustomButtonStyles {
   static BoxDecoration get gradientPrimaryToAmberDecoration => BoxDecoration(
         borderRadius: BorderRadius.circular(14.h),
         gradient: LinearGradient(
-          begin: Alignment(0.82, 0),
-          end: Alignment(-0.4, 0),
+          begin: const Alignment(0.82, 0),
+          end: const Alignment(-0.4, 0),
           colors: [theme.colorScheme.primary, appTheme.amber100],
         ),
       );

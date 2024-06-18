@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bacakomik_v3/core/app_export.dart';
 
 class UserprofileslistItemWidget extends StatelessWidget {
-  const UserprofileslistItemWidget({Key? key}) : super(key: key);
+  const UserprofileslistItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

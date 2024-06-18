@@ -34,8 +34,8 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     logoPageScreen: (context) => const LogoPageScreen(),
-    loginPageScreen: (context) => LoginPageScreen(),
-    registerPageScreen: (context) => RegisterPageScreen(),
+    loginPageScreen: (context) => const LoginPageScreen(),
+    registerPageScreen: (context) => const RegisterPageScreen(),
     homePageContainerScreen: (context) => HomePageContainerScreen(),
     kategoriPgaeScreen: (context) => const KategoriPgaeScreen(),
     pagePerkomikScreen: (context) => const PagePerkomikScreen(),
@@ -43,8 +43,8 @@ class AppRoutes {
     pageBacaKomikScreen: (context) => const PageBacaKomikScreen(),
     appNavigationScreen: (context) => const AppNavigationScreen(),
     searchPageScreen: (context) => SearchPageScreen(),
-    filterPageScreen: (context) => FilterPageScreen(),
-    hasilFilterPageScreen: (context) => HasilFilterPageScreen(),
+    filterPageScreen: (context) => const FilterPageScreen(),
+    hasilFilterPageScreen: (context) => const HasilFilterPageScreen(),
   };
 }
 

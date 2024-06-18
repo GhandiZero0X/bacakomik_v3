@@ -7,7 +7,7 @@ import 'widgets/searchgrid_item_widget.dart';
 
 // ignore: must_be_immutable
 class SearchPageScreen extends StatelessWidget {
-  SearchPageScreen({Key? key}) : super(key: key);
+  SearchPageScreen({super.key});
 
   TextEditingController searchController = TextEditingController();
 
@@ -92,10 +92,10 @@ class SearchPageScreen extends StatelessWidget {
           mainAxisSpacing: 40.h,
           crossAxisSpacing: 40.h,
         ),
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemCount: 6,
         itemBuilder: (context, index) {
-          return SearchgridItemWidget();
+          return const SearchgridItemWidget();
         },
       ),
     );

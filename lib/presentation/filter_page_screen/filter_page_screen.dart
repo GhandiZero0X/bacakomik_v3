@@ -1,14 +1,13 @@
 import 'package:bacakomik_v3/presentation/filter_page_screen/widget/typefilter_item_widget.dart';
 import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
-import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_leading_image.dart';
 import '../../widgets/app_bar/appbar_subtitle.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/custom_elevated_button.dart';
 
 class FilterPageScreen extends StatelessWidget {
-  const FilterPageScreen({Key? key}) : super(key: key);
+  const FilterPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,7 @@ class FilterPageScreen extends StatelessWidget {
       child: Wrap(
         runSpacing: 8.v,
         spacing: 8.h,
-        children: List<Widget>.generate(51, (index) => TypefilterItemWidget()),
+        children: List<Widget>.generate(51, (index) => const TypefilterItemWidget()),
       ),
     );
   }

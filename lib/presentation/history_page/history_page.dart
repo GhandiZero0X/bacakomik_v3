@@ -5,7 +5,7 @@ import '../../widgets/custom_search_view.dart';
 import 'widgets/userprofileslist_item_widget.dart';
 
 class HistoryPage extends StatefulWidget {
-  const HistoryPage({Key? key}) : super(key: key);
+  const HistoryPage({super.key});
 
   @override
   HistoryPageState createState() => HistoryPageState();
@@ -75,11 +75,11 @@ class HistoryPageState extends State<HistoryPage>
     return SizedBox(
       width: double.maxFinite,
       child: ListView.separated(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         shrinkWrap: true,
         separatorBuilder: (context, index) => SizedBox(height: 18.v),
         itemCount: 3,
-        itemBuilder: (context, index) => UserprofileslistItemWidget(),
+        itemBuilder: (context, index) => const UserprofileslistItemWidget(),
       ),
     );
   }

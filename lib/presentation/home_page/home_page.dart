@@ -1,3 +1,4 @@
+import 'package:bacakomik_v3/presentation/kategori_pgae_screen/kategori_pgae_screen.dart';
 import 'package:bacakomik_v3/widgets/custom_search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:bacakomik_v3/core/app_export.dart';
@@ -5,7 +6,6 @@ import 'widgets/thirtysix_item_widget.dart';
 import 'widgets/line2_item_widget.dart';
 import 'widgets/homepage_item_widget.dart';
 import 'widgets/thirtysix1_item_widget.dart';
-import '../../routes/app_routes.dart';
 
 // ignore_for_file: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -330,8 +330,7 @@ class HomePage extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       // Navigasi ke halaman kategori ketika tombol ditekan
-                      Navigator.of(context)
-                          .pushReplacementNamed(AppRoutes.kategoriPgaeScreen);
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => KategoriPgaeScreen()));
                     },
                     child: Text(
                       "Semua",

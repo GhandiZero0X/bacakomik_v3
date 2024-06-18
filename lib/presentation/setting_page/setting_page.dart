@@ -280,17 +280,17 @@ class SettingPage extends StatelessWidget {
             // Navigasi ke halaman login
             Navigator.pushReplacementNamed(context, '/loginPage');
           },
-          child: Text(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.red, // Warna latar belakang putih
+            padding: EdgeInsets.symmetric(horizontal: 50.h, vertical: 20.v),
+            textStyle: const TextStyle(fontSize: 16),
+          ),
+          child: const Text(
             'Logout',
             style: TextStyle(
               color: Colors.white, // Warna teks hitam
               fontSize: 16,
             ),
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red, // Warna latar belakang putih
-            padding: EdgeInsets.symmetric(horizontal: 50.h, vertical: 20.v),
-            textStyle: TextStyle(fontSize: 16),
           ),
         ),
       ),

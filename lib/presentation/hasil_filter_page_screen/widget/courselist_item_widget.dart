@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/app_export.dart';
 
 class CourselistItemWidget extends StatelessWidget {
-  const CourselistItemWidget({Key? key}) : super(key: key);
+  const CourselistItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,6 @@
 import 'dart:async';
 import 'package:bacakomik_v3/core/app_export.dart';
 import 'package:flutter/material.dart';
-import '../../core/utils/image_constant.dart';
-import '../../routes/app_routes.dart';
-import '../../widgets/custom_image_view.dart';
 
 class LogoPageScreen extends StatefulWidget {
   const LogoPageScreen({super.key});

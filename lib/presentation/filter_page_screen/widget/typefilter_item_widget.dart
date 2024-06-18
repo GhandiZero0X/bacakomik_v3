@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/app_export.dart';
 
 class TypefilterItemWidget extends StatelessWidget {
-  const TypefilterItemWidget({Key? key}) : super(key: key);
+  const TypefilterItemWidget({super.key});
 
   Widget buildChip(BuildContext context, String label) {
     return Theme(

@@ -4,56 +4,53 @@ import 'package:bacakomik_v3/core/app_export.dart';
 
 // ignore_for_file: must_be_immutable
 class ExplorePage extends StatelessWidget {
-  const ExplorePage({super.key});
+  const ExplorePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: _buildAppBar(),
         body: Container(
           width: double.maxFinite,
           decoration: AppDecoration.fillWhiteA,
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Favorite Genres",
-                  style: CustomTextStyles.titleLargeGray80001,
-                ),
-              ),
-              SizedBox(height: 9.v),
-              _buildList(context),
-            ],
-          ),
+          child: _buildList(context),
         ),
       ),
     );
   }
 
-  /// Section Widget
+  PreferredSizeWidget _buildAppBar() {
+    return PreferredSize(
+      preferredSize: Size.fromHeight(56.0), // Tinggi AppBar yang diinginkan
+      child: AppBar(
+        automaticallyImplyLeading: false, // Menghilangkan tombol back
+        title: Text(
+          "Explore Genres",
+          style: CustomTextStyles.titleLargeBold,
+        ),
+        backgroundColor: Colors.white, // Sesuaikan warna latar belakang AppBar
+        elevation: 0, // Hilangkan shadow di bawah AppBar jika tidak diperlukan
+      ),
+    );
+  }
+
   Widget _buildList(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 3.h,
-          right: 2.h,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 3.h, vertical: 3.v),
+      child: GridView.builder(
+        shrinkWrap: true,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          mainAxisExtent: 91.v,
+          crossAxisCount: 4,
+          mainAxisSpacing: 32.h,
+          crossAxisSpacing: 32.h,
         ),
-        child: GridView.builder(
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisExtent: 91.v,
-            crossAxisCount: 4,
-            mainAxisSpacing: 32.h,
-            crossAxisSpacing: 32.h,
-          ),
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: 16,
-          itemBuilder: (context, index) {
-            return const ListItemWidget();
-          },
-        ),
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: 16,
+        itemBuilder: (context, index) {
+          return const ListItemWidget();
+        },
       ),
     );
   }

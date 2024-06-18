@@ -6,7 +6,7 @@ import '../../widgets/app_bar/appbar_subtitle.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
 
 class HasilFilterPageScreen extends StatelessWidget {
-  const HasilFilterPageScreen({Key? key}) : super(key: key);
+  const HasilFilterPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -89,11 +89,11 @@ class HasilFilterPageScreen extends StatelessWidget {
       width: double.maxFinite,
       margin: EdgeInsets.only(left: 16.h, right: 28.h),
       child: ListView.separated(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         separatorBuilder: (context, index) => SizedBox(height: 16.v),
         itemCount: 5,
-        itemBuilder: (context, index) => CourselistItemWidget(),
+        itemBuilder: (context, index) => const CourselistItemWidget(),
       ),
     );
   }

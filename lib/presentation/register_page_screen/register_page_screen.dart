@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 
 // ignore_for_file: must_be_immutable
 class RegisterPageScreen extends StatefulWidget {
-  RegisterPageScreen({super.key});
+  const RegisterPageScreen({super.key});
 
   @override
   _RegisterPageScreenState createState() => _RegisterPageScreenState();
@@ -35,14 +35,14 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
       var data = jsonDecode(response.body);
 
       if (data["message"] == "Registrasi berhasil") {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text("Registrasi berhasil"),
           backgroundColor: Colors.green,
           duration: Duration(seconds: 5),
         ));
         Navigator.pushNamed(context, AppRoutes.loginPageScreen);
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text("Error"),
           backgroundColor: Colors.red,
           duration: Duration(seconds: 5),
@@ -50,7 +50,7 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
       }
     } catch (e) {
       print(e);
-      return null;
+      return;
     }
   }
 

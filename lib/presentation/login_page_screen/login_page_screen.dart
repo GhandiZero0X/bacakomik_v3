@@ -7,7 +7,7 @@ import 'package:bacakomik_v3/core/app_export.dart';
 import 'package:http/http.dart' as http;
 
 class LoginPageScreen extends StatefulWidget {
-  LoginPageScreen({super.key});
+  const LoginPageScreen({super.key});
 
   @override
   _LoginPageScreenState createState() => _LoginPageScreenState();
@@ -36,19 +36,19 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(data["message"]),
           backgroundColor: Colors.green,
-          duration: Duration(seconds: 5),
+          duration: const Duration(seconds: 5),
         ));
         Navigator.pushNamed(context, AppRoutes.homePageContainerScreen);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(data["message"]),
           backgroundColor: Colors.red,
-          duration: Duration(seconds: 5),
+          duration: const Duration(seconds: 5),
         ));
       }
     } catch (e) {
       print(e);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Could not connect to the server.'),
         backgroundColor: Colors.red,
         duration: Duration(seconds: 5),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/app_export.dart';
 
 class SearchgridItemWidget extends StatelessWidget {
-  const SearchgridItemWidget({Key? key}) : super(key: key);
+  const SearchgridItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
